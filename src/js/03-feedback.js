@@ -27,7 +27,7 @@ function resetForm(e) {
 
 function sendFormData(e) {
     e.preventDefault();
-    console.log(formData);
+    console.log("For data:", formData);
     resetForm(e);
 }
 
