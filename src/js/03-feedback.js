@@ -32,7 +32,6 @@ function sendFormData(e) {
 }
 
 formRef.addEventListener('input', throttle(writeInStorage, 500));
-
 formRef.addEventListener('submit', sendFormData);
 
 restoreDataFromStorage();
