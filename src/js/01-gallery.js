@@ -27,6 +27,7 @@ function onMiniImgClick(e) {
 }
 
 galleryRef.innerHTML = makePictureCards(galleryItems);
+
 lightbox = new SimpleLightbox('.gallery a', {
         captionsData: "alt",
         captionDelay: 250

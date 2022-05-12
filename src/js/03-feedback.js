@@ -27,8 +27,12 @@ function resetForm(e) {
 
 function sendFormData(e) {
     e.preventDefault();
-    console.log("For data:", formData);
-    resetForm(e);
+    if (formData.email && formData.message) {
+        console.log("For data:", formData);
+        resetForm(e);
+    } else {
+        alert("Заповнені не всі поля...");
+    }
 }
 
 formRef.addEventListener('input', throttle(writeInStorage, 500));
