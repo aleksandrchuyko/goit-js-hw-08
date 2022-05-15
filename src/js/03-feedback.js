@@ -1,5 +1,9 @@
 import throttle from "lodash.throttle";
 
+import Notiflix from 'notiflix';
+
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 const formRef = document.querySelector('.feedback-form');
 const SAVED_DATA_KEY = "feedback-form-state";
 let formData = {};
@@ -31,7 +35,8 @@ function sendFormData(e) {
         console.log("For data:", formData);
         resetForm(e);
     } else {
-        alert("Заповнені не всі поля...");
+        //alert("Заповнені не всі поля...");
+        Notiflix.Notify.warning('Заповнені не всі поля...');
     }
 }
 
